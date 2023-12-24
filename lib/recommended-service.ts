@@ -32,6 +32,24 @@ export async function getRecommended(){
                 }, 
               },
             },
+            // {
+            //   NOT: {
+            //     blockedBy:{
+            //       some:{
+            //         blockerId: userId,
+            //       },
+            //     }, 
+            //   },
+            // },
+            {
+              NOT: {
+                blocking:{
+                  some:{
+                    blockedId: userId,
+                  },
+                },
+              },
+            },
           ],
         },
         orderBy:{ 
