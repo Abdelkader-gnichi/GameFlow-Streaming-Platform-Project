@@ -39,7 +39,7 @@ export function UserItem({username,imgUrl,isLive}: UserItemProps){
                                     <UserAvatar imgUrl={imgUrl}
                                                 username={username}
                                                 isLive={isLive}
-                                                
+                                                showBadge
                                     />
                                     {!collapsed && (
                                         <p className="truncate">
