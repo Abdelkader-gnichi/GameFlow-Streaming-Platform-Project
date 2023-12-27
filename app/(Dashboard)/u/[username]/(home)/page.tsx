@@ -1,3 +1,3 @@
-export default function UserPage(){
-    return <div> User Page</div>;
+export default function CreatorPage(){
+    return <div> Creator Page</div>;
 }
