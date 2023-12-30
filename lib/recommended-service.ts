@@ -52,6 +52,9 @@ export async function getRecommended(){
             },
           ],
         },
+        include:{
+          stream: true
+        },
         orderBy:{ 
             createdAt: "desc"
         }
@@ -59,6 +62,9 @@ export async function getRecommended(){
   } else {
     // await new Promise(resolve => setTimeout(resolve,9000))
     users = await db.user.findMany({
+        include: {
+          stream: true
+        },
         orderBy: {
             createdAt: "desc"
         }
