@@ -26,6 +26,8 @@ export async function POST(req: Request){
                 isLive: false
             },
         });
+
+        return new Response("Stream ended successfully", {status: 200});
     }
 
     if(event.event === "ingress_started"){
@@ -37,6 +39,9 @@ export async function POST(req: Request){
                 isLive: true,
             },
         });
+
+        return new Response("Stream started successfully", {status: 200});
     }
 
+    return new Response('', { status: 200 });
 }
