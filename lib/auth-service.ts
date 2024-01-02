@@ -24,8 +24,14 @@ export async function getSelf(){
 }
 
 export async function getSelfByUsername(username: string){
+    let self;
+    try{
+        self  = await currentUser();
+
+    } catch {
+        throw new Error("Clerk can't fetch current user data")
+    }
     
-    const self  = await currentUser();
     if(!self || !self.username){
         throw new Error("Unauthorized")
     }
