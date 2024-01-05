@@ -69,9 +69,6 @@ export function Chat({ hostName, hostIdentity, viewerName, isFollowing, isChatEn
             )}
             { variant === ChatVariant.COMMUNITY && (
                 <ChatCommunity viewerName={viewerName} hostName={hostName} isHidden={isHidden}  />
-                // <>
-
-                // </>
             )}
         </div>
     );

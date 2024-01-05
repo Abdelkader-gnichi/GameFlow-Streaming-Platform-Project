@@ -45,12 +45,13 @@ export function UserAvatar({username, imgUrl, isLive, showBadge, size}:UserAvata
                     {username[username.length -1]}
                 </AvatarFallback>
             </Avatar>
-            {canShowBadge && (<div className="absolute -bottom-3 left-1/2  transform
-                -translate-x-1/2 ">
+            {canShowBadge && (
+                <div className="absolute -bottom-3 left-1/2  transform -translate-x-1/2 ">
                     <LiveBadge />
-
-                </div>)}
-      </div>)
+                </div>
+            )}
+      </div>
+    );
 }
 
 interface UserAvatarSkeletonProps extends VariantProps<typeof avatarSizes> {}
