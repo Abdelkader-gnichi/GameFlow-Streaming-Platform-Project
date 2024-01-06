@@ -19,8 +19,8 @@ interface UserItemProps {
 
 export function UserItem({username,imgUrl,isLive}: UserItemProps){
 
-    const pathname = usePathname()
-    const {collapsed} = useSidebar( (state) => state)
+    const pathname = usePathname();
+    const {collapsed} = useSidebar((state) => state);
     const href = `/${username}`;
     const isActive = pathname === href;
     
@@ -39,18 +39,16 @@ export function UserItem({username,imgUrl,isLive}: UserItemProps){
                                     <UserAvatar imgUrl={imgUrl}
                                                 username={username}
                                                 isLive={isLive}
-                                                showBadge
+                                                showBadge={collapsed}
                                     />
                                     {!collapsed && (
                                         <p className="truncate">
                                             {username}
-
                                         </p>
                                     )}
                                     {!collapsed && isLive && (
                                         <LiveBadge className="ml-auto" />
-                                    )}
-                                    
+                                    )} 
                             </div>
                        </Link>
              </Button >
