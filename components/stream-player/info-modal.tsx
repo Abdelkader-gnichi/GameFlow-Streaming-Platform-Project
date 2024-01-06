@@ -59,7 +59,7 @@ export function InfoModal({ initialName, initialThumbnailUrl }: InfoModalProps){
 
     return (
         <Dialog>
-            <DialogTrigger>
+            <DialogTrigger asChild>
                 <Button variant="link" size="sm" className="ml-auto">
                     Edit
                 </Button>

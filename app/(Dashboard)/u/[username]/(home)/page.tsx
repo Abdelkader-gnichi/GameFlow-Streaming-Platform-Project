@@ -24,8 +24,7 @@ export default async function CreatorPage({ params }: CreatorPageProps){
        
         return (
             <div className="h-full"> 
-                <StreamPlayer user={user} stream={user.stream} isFollowing />  {/* isFollowing always true cos this is our streaming in the dashboard */}
-            
+                <StreamPlayer user={user} stream={user.stream}  isFollowing />  {/* isFollowing always true cos this is our streaming in the dashboard */}
             </div>
         );
         
