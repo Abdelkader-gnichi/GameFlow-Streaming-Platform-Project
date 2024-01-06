@@ -28,8 +28,9 @@ export async function getSelfByUsername(username: string){
     try{
         self  = await currentUser();
 
-    } catch {
-        throw new Error("Clerk can't fetch current user data")
+    } catch (error) {
+        console.error("Error fetching current user:", error);
+        throw new Error("Clerk can't fetch current user data");
     }
     
     if(!self || !self.username){

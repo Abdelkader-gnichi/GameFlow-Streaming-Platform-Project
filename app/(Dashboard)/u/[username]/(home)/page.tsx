@@ -30,6 +30,7 @@ export default async function CreatorPage({ params }: CreatorPageProps){
         );
         
     } catch(error){
-        console.log(error)
+        console.error("Error in CreatorPage:", error);
+        throw error;
     }
 }

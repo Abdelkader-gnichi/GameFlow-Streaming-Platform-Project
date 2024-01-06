@@ -20,7 +20,8 @@ export default async function CreatorLayout({params,children}:  CreatorLayoutPro
         }
 
     } catch(error) {
-        console.log(error);
+        console.error("Error in CreatorLayout:", error);
+        throw error;
     }
     
     return <>
