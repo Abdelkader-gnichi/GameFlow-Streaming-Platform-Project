@@ -17,7 +17,7 @@ export function CopyButton({ value, }: CopyButtonProps){
 
         setIsCopied(true);
         navigator.clipboard.writeText(value)
-        setTimeout(() => setIsCopied(false), 1000)
+        setTimeout(() => setIsCopied(false), 1000);
     }
 
     const Icon = isCopied ? CheckCheck : Copy

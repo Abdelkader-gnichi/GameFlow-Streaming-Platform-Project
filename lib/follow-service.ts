@@ -41,6 +41,7 @@ export async function isFollowingUser(id: string){
 
     try{
         const self = await getSelf();
+        
         const otherUser = await db.user.findUnique({
             where:{ id }, 
         });
@@ -102,16 +103,17 @@ export async function followUser(id: string){
 export async function unfollowUser(id: string){
 
     const self = await getSelf();
+
     const otherUser = await db.user.findUnique({
         where: { id }
-    })
+    });
 
     if(!otherUser){
-        throw new Error("The user that you want to unfollow is not found")
+        throw new Error("The user that you want to unfollow is not found");
     }
 
     if(self.id === otherUser.id){
-        throw new Error("You are trying to unfollow your self please stop")
+        throw new Error("You are trying to unfollow your self please stop");
     }
 
     const existingFollow =  await db.follow.findUnique({

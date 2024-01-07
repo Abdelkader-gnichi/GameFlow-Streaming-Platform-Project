@@ -6,9 +6,7 @@ interface UrlCardProps {
 }
 
 
-export async function UrlCard({ value }: UrlCardProps){
-
-
+export function UrlCard({ value }: UrlCardProps){
 
     return (
         <div className="rounded-xl bg-muted p-6">

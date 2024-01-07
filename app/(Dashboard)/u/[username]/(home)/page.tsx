@@ -12,24 +12,18 @@ interface CreatorPageProps {
 
 export default async function CreatorPage({ params }: CreatorPageProps){
     
-    
-    try{
-       const externalUser = await currentUser();
-       const user = await getUserByUsername(params.username);
+    const externalUser = await currentUser();
+    const user = await getUserByUsername(params.username);
 
-        if(!user || user.externalUserId !== externalUser?.id || !user.stream){
-            throw new Error("Unauthorized")
-        }
+    if(!user || user.externalUserId !== externalUser?.id || !user.stream){
+        throw new Error("Unauthorized")
+    }
     
        
-        return (
-            <div className="h-full"> 
-                <StreamPlayer user={user} stream={user.stream}  isFollowing />  {/* isFollowing always true cos this is our streaming in the dashboard */}
-            </div>
-        );
+    return (
+        <div className="h-full"> 
+            <StreamPlayer user={user} stream={user.stream}  isFollowing />  {/* isFollowing always true cos this is our streaming in the dashboard */}
+        </div>
+    );
         
-    } catch(error){
-        console.error("Error in CreatorPage:", error);
-        throw error;
-    }
 }

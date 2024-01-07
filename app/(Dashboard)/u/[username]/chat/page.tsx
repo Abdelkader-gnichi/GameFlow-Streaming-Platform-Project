@@ -3,10 +3,12 @@ import { getStreamByUserId } from "@/lib/stream-service"
 import { ToggleCard } from "./_components/toggle-card"
 
 export default async function ChatPage(){
-    const self = await getSelf()
-    const stream = await getStreamByUserId(self.id)
+    
+    const self = await getSelf();
+    const stream = await getStreamByUserId(self.id);
+    
     if(!stream){
-        throw new Error("Stream Not Found")
+        throw new Error("Stream Not Found");
     }
 
     return (
@@ -29,6 +31,6 @@ export default async function ChatPage(){
                             label="Must be following to Chat"
                             value= {stream.isChatFollowersOnly} />
             </div>
-
-        </div>);
+        </div>
+    );
 }

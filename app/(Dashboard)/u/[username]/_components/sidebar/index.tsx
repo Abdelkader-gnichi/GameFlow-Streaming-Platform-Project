@@ -8,9 +8,6 @@ export function Sidebar(){
         <Wrapper>
             <Toggle />
             <Navigation />
-        </Wrapper>);
-    
-   
-    
-    
+        </Wrapper>
+        ); 
 }

@@ -3,7 +3,7 @@
 import { useUser } from "@clerk/nextjs"
 import { Fullscreen, KeyRound, MessageSquare, Users } from "lucide-react"
 import { usePathname } from "next/navigation"
-import { NavItem, NavItemSkeleton } from "./navitem";
+import { NavItem, NavItemSkeleton } from "./nav-item";
 
 export function Navigation(){
 

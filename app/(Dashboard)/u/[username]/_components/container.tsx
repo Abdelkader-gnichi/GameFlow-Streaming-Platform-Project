@@ -22,13 +22,12 @@ export function Container({children}: ContainerProps){
         }else{
             onExpand();
         }
-    },[matches, onExpand, onCollapse]);
+    }, [matches, onExpand, onCollapse]);
 
     return (
         <div className={cn("flex-1",collapsed ? "ml-[70px]" : "ml-[70px] lg:ml-60")}>
             {children}
-        </div>);
-    
-    
-    
+        </div>
+    );
+
 }

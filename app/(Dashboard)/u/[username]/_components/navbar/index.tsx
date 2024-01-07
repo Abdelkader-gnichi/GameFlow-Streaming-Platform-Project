@@ -2,7 +2,7 @@ import { Actions } from "./actions";
 import { Logo } from "./logo";
 
 
-export  function Navbar(){
+export function Navbar(){
 
     return (
     
@@ -10,11 +10,7 @@ export  function Navbar(){
         bg-[#252731] px-2 lg:px-4 flex justify-between 
         items-center shadow-sm">
             <Logo />
-            
             <Actions />
         </nav>
-        
-    
-    
     );
 }

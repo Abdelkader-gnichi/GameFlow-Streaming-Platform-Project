@@ -11,9 +11,11 @@ interface KeyCardProps {
 
 export function KeyCard({ value, }: KeyCardProps){
     const [show, setShow]= useState(false);
+    
     function onShow(){
         setShow(!show);
     }
+
     return (
         <div className="rounded-xl bg-muted p-6">
             <div className="flex items-start gap-x-10">

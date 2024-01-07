@@ -13,6 +13,7 @@ export async function onFollow(id: string){
         if(followedUser){
             revalidatePath(`/${followedUser.following.username}`)
         }
+        
         return followedUser;
     } catch(error) {
         throw new Error(`Internal Error`)

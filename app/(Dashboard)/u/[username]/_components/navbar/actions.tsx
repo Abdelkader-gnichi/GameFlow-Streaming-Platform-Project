@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
 
 
-export async function Actions(){
-    
+export function Actions(){
     
     return (
         <div className="flex items-center justify-end gap-x-2 ml-4 lg:ml-0">
@@ -19,5 +18,6 @@ export async function Actions(){
                 </Link>
             </Button>
             <UserButton afterSignOutUrl="/"/> 
-        </div>);
+        </div>
+    );
 }

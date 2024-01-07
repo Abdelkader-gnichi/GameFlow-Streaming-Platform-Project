@@ -12,18 +12,12 @@ interface CreatorLayoutProps{
 
 
 export default async function CreatorLayout({params,children}:  CreatorLayoutProps){
-    
-    try{
-        const self = await getSelfByUsername(params.username);
-        if(!self){
-            redirect("/")
-        }
-
-    } catch(error) {
-        console.error("Error in CreatorLayout:", error);
-        throw error;
+    const self = await getSelfByUsername(params.username);
+        
+    if(!self){
+        redirect("/");
     }
-    
+
     return <>
          <Navbar />
         <div className="flex h-full pt-20">

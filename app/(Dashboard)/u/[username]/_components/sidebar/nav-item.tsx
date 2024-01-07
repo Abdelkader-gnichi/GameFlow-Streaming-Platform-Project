@@ -13,7 +13,7 @@ interface NavItemProps {
 }
 
 
-export function NavItem({label, icon: Icon, href, isActive}:NavItemProps){
+export function NavItem({ label, icon: Icon, href, isActive }: NavItemProps){
     const { collapsed } = useCreatorSidebar((state) => state);
 
     return <Button asChild variant="ghost" className={cn("w-full h-12", collapsed ? "justify-center" : "justify-start", isActive && "bg-accent")}>

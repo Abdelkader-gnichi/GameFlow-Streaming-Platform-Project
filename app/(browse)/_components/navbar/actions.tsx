@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button";
 
 
 export async function Actions(){
-    try{
-        const user = await currentUser();
+
+    const user = await currentUser();
     
     
-        return (<div className="flex items-center justify-end gap-x-2 ml-4 lg:ml-0">
+    return (
+        <div className="flex items-center justify-end gap-x-2 ml-4 lg:ml-0">
 
             {!user && (
                 <SignInButton>
@@ -34,10 +35,9 @@ export async function Actions(){
                     <UserButton afterSignOutUrl="/"/>
                 </div>
                 )}
-            
-        </div>);
+                
+        </div>
+    );
 
-    } catch(error){
-        console.error(`Error app/(browse)/navbar/actions.tsx:`,error);
-    }
+
 }
